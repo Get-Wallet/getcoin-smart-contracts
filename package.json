@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Get-Wallet/getcoin-smart-contracts/issues"
   },
-  "homepage": "https://github.com/Get-Wallet/getcoin-smart-contracts#readme"
+  "homepage": "https://github.com/Get-Wallet/getcoin-smart-contracts#readme",
+  "devDependencies": {
+    "truffle": "^5.5.28"
+  }
 }
