@@ -1,0 +1,24 @@
+{
+  "name": "getcoin-smart-contracts",
+  "version": "0.0.1",
+  "description": "Smart contracts for the Getcoin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Get-Wallet/getcoin-smart-contracts.git"
+  },
+  "keywords": [
+    "getcoin",
+    "getco",
+    "smart contracts"
+  ],
+  "author": "Getwallet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Get-Wallet/getcoin-smart-contracts/issues"
+  },
+  "homepage": "https://github.com/Get-Wallet/getcoin-smart-contracts#readme"
+}
