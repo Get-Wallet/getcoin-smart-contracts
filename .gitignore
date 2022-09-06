@@ -61,3 +61,6 @@ artifacts
 .certora*
 .last_confs
 certora_*
+
+# OpenZeppelin
+.openzeppelin/unknown-*.json
