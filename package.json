@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Get-Wallet/getcoin-smart-contracts#readme",
   "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.16",
     "@openzeppelin/truffle-upgrades": "^1.16.0",
     "chai": "^4.3.6",
     "ganache-cli": "^6.12.2",
