@@ -46,6 +46,7 @@ require('dotenv').config();
 const {
     POLYGON_TESTNET_MUMBAI_MNEMONIC,
     POLYGON_TESTNET_MUMBAI_RPC_URL,
+    POLYGONSCAN_API_KEY,
 } = process.env;
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
@@ -153,5 +154,13 @@ module.exports = {
     //       directory: ".db"
     //     }
     //   }
-    // }
+    // },
+
+    plugins: [
+        'truffle-plugin-verify',
+    ],
+
+    api_keys: {
+        polygonscan: POLYGONSCAN_API_KEY,
+    },
 };
