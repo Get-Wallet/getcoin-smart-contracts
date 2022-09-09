@@ -1,0 +1,12 @@
+const Getcoin = artifacts.require('Getcoin');
+const GetcoinV2 = artifacts.require('GetcoinV2');
+
+const {
+    upgradeProxy
+} = require('@openzeppelin/truffle-upgrades');
+
+module.exports = async function (deployer) {
+    const existing = await Getcoin.deployed();
+
+    await upgradeProxy(existing.address, GetcoinV2, {deployer});
+};
