@@ -1,0 +1,38 @@
+{
+  "name": "getcoin-smart-contracts",
+  "version": "0.0.1",
+  "description": "Smart contracts for the Getcoin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Get-Wallet/getcoin-smart-contracts.git"
+  },
+  "keywords": [
+    "getcoin",
+    "getco",
+    "smart contracts"
+  ],
+  "author": "GetFuture Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Get-Wallet/getcoin-smart-contracts/issues"
+  },
+  "homepage": "https://github.com/Get-Wallet/getcoin-smart-contracts#readme",
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "@openzeppelin/truffle-upgrades": "^1.16.0",
+    "@truffle/hdwallet-provider": "^2.0.14",
+    "chai": "^4.3.6",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.5.29",
+    "truffle-plugin-verify": "^0.5.28"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3",
+    "@openzeppelin/contracts-upgradeable": "^4.7.3",
+    "dotenv": "^16.0.2"
+  }
+}

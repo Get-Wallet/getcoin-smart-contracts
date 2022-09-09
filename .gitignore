@@ -1,0 +1,67 @@
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+allFiredEvents
+scTopics
+
+# Coverage directory used by tools like istanbul
+coverage
+coverage.json
+coverageEnv
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directory
+node_modules
+
+# Debug log from npm
+npm-debug.log
+
+# Environment variables
+.env
+
+# Truffle build directory
+build/
+
+# macOS
+.DS_Store
+
+# Truffle
+.node-xmlhttprequest-*
+
+# IntelliJ IDE
+.idea
+
+# Docs artifacts
+docs/modules/api
+
+# Only used to package @openzeppelin/contracts
+contracts/build/
+contracts/README.md
+
+# Temporary artifact from solidity-coverage
+.coverage_artifacts
+.coverage_cache
+.coverage_contracts
+
+# Hardhat
+cache
+artifacts
+
+# Certora
+.certora*
+.last_confs
+certora_*
+
+# OpenZeppelin
+.openzeppelin/unknown-*.json
+.openzeppelin/polygon-mumbai.json
