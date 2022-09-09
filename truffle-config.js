@@ -41,10 +41,14 @@
  * https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/
  */
 
-// require('dotenv').config();
-// const { MNEMONIC, PROJECT_ID } = process.env;
+require('dotenv').config();
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+const {
+    POLYGON_TESTNET_MUMBAI_MNEMONIC,
+    POLYGON_TESTNET_MUMBAI_MATICVIGIL_APP_ID,
+} = process.env;
+
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
     /**
@@ -68,6 +72,17 @@ module.exports = {
             host: "127.0.0.1",     // Localhost (default: none)
             port: 8545,            // Standard Ethereum port (default: none)
             network_id: "*",       // Any network (default: none)
+        },
+
+        // Useful for deploying to a public network.
+        // Note: It's important to wrap the provider as a function to ensure truffle uses a new provider every time.
+
+        polygonTestnetMumbai: {
+            provider: () => new HDWalletProvider(POLYGON_TESTNET_MUMBAI_MNEMONIC, 'wss://rpc-mumbai.maticvigil.com/ws/v1/' + POLYGON_TESTNET_MUMBAI_MATICVIGIL_APP_ID),
+            network_id: 80001,   // Mumbai's id.
+            confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
+            timeoutBlocks: 200,  // # of blocks before a deployment times out. (minimum/default: 50)
+            skipDryRun: true     // Skip dry run before migrations? (default: false for public nets)
         },
 
         // An additional network, but with some advanced options…
