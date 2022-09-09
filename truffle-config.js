@@ -45,7 +45,7 @@ require('dotenv').config();
 
 const {
     POLYGON_TESTNET_MUMBAI_MNEMONIC,
-    POLYGON_TESTNET_MUMBAI_MATICVIGIL_APP_ID,
+    POLYGON_TESTNET_MUMBAI_RPC_URL,
 } = process.env;
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
@@ -78,10 +78,11 @@ module.exports = {
         // Note: It's important to wrap the provider as a function to ensure truffle uses a new provider every time.
 
         polygonTestnetMumbai: {
-            provider: () => new HDWalletProvider(POLYGON_TESTNET_MUMBAI_MNEMONIC, 'wss://rpc-mumbai.maticvigil.com/ws/v1/' + POLYGON_TESTNET_MUMBAI_MATICVIGIL_APP_ID),
+            provider: () => new HDWalletProvider(POLYGON_TESTNET_MUMBAI_MNEMONIC, POLYGON_TESTNET_MUMBAI_RPC_URL),
             network_id: 80001,   // Mumbai's id.
             confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
             timeoutBlocks: 200,  // # of blocks before a deployment times out. (minimum/default: 50)
+            networkCheckTimeout: 20000,
             skipDryRun: true     // Skip dry run before migrations? (default: false for public nets)
         },
 
