@@ -44,6 +44,8 @@
 require('dotenv').config();
 
 const {
+    POLYGON_MAINNET_MNEMONIC,
+    POLYGON_MAINNET_RPC_URL,
     POLYGON_TESTNET_MUMBAI_MNEMONIC,
     POLYGON_TESTNET_MUMBAI_RPC_URL,
     POLYGONSCAN_API_KEY,
@@ -85,6 +87,17 @@ module.exports = {
             timeoutBlocks: 200,  // # of blocks before a deployment times out. (minimum/default: 50)
             networkCheckTimeout: 20000,
             skipDryRun: true     // Skip dry run before migrations? (default: false for public nets)
+        },
+
+        polygonMainnet: {
+            provider: () => new HDWalletProvider(POLYGON_MAINNET_MNEMONIC, POLYGON_MAINNET_RPC_URL),
+            network_id: 137,       // Mainnet's id.
+            gas: 8500000,          // Gas sent with each transaction (default: ~6700000)
+            gasPrice: 70000000000, // 70 gwei (in wei) (default: 100 gwei)
+            confirmations: 2,      // # of confirmations to wait between deployments. (default: 0)
+            timeoutBlocks: 200,    // # of blocks before a deployment times out. (minimum/default: 50)
+            networkCheckTimeout: 20000,
+            skipDryRun: true       // Skip dry run before migrations? (default: false for public nets)
         },
 
         // An additional network, but with some advanced options…
